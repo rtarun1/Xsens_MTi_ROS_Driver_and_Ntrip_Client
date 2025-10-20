@@ -10,7 +10,7 @@
         # Option 1: Automatic Device Scanning
         # If set to 'true', the driver will ignore 'port' and 'baudrate' settings.
         # It will automatically scan all ports and select the first device found.
-        scan_for_devices: true
+        scan_for_devices: false
 
         # Option 2: Manual Device Configuration
         # If you prefer to manually specify the device port and baudrate,
@@ -25,7 +25,7 @@
         # or to set it to 921600, send: FA FF 18 01 80 68.
 
         port: '/dev/xsens_imu' # Uncomment and set your device's port.
-        # baudrate: 921600     # Uncomment and set your device's baudrate.
+        baudrate: 921600     # Uncomment and set your device's baudrate.
 
         # Device Scanning Selection
         # ----------------
@@ -62,7 +62,7 @@
         # ---------------------------
         # If you want to configure your sensor, firstly set this flag to true, then change desired values for the parameters below.
         # Note: This configuration is required only once, once it is successful, the configurations are stored in the sensor, then you could set this to false.
-        enable_deviceConfig: false
+        enable_deviceConfig: true
 
         # Sensor Extended Kalman Filter Option Configurations:
         # --------------------------
@@ -70,7 +70,7 @@
         # If you want to configure the filter option, firstly set the 'enable_filter_config', then:
         # For MTi-3/7/8/30/300/G-710/670(G)/680(G): change the 'mti_filter_option' to desired index below for your model.
         # For MTi-620(R)/MTi-630(R): change the 'mti620630filterlabel_rollpitch' and 'mti620630filterlabel_yaw' to the exact labels.
-        enable_filter_config: false
+        enable_filter_config: true
         # ---------------------------
         # For MTi-670(G): 3 options: 0 = "General", 1 = "GeneralNoBaro", 2 = "GeneralMag"
         # For MTi-680(G), 3 options: 0 = "General_RTK", 1 = "GeneralNoBaro_RTK", 2 = "GeneralMag_RTK"
@@ -91,7 +91,7 @@
 
         # MTi-2/320/200: filter only has VRU, you could enable the AHS options:
         # valid for MTI-2/3/320, MTi-20/30, MTI-200/300 when using the VRU filter options.
-        enable_active_heading_stabilization: false
+        enable_active_heading_stabilization: true
 
 
         # GNSS Lever Arm Configuration 
@@ -195,7 +195,7 @@
 
         # Other option flags:
         # valid for MTi-2/3/7/8/20/30/620/630/670/680/200/300/710
-        enable_inrun_compass_calibration: false
+        enable_inrun_compass_calibration: true
 
 
         # Set baudrate
